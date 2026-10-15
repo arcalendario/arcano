@@ -232,14 +232,8 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
 
 
   ctx.beginPath();
-  ctx.lineWidth = ancho * 3 / 160;
-
-  // Detectar automáticamente el color del fondo según el modo del navegador para pintar las líneas igual
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      ctx.strokeStyle = "#121212"; // Color de línea igual al fondo oscuro
-  } else {
-      ctx.strokeStyle = "#ffffff"; // Color de línea igual al fondo claro (blanco)
-  }
+  ctx.lineWidth= ancho*3/160;
+  ctx.strokeStyle = "white";
 
   ctx.moveTo((ancho/2)+ancho/22, alto/2 );
   ctx.quadraticCurveTo(ancho/2, alto/2, ancho/2, alto/2-alto/22); // pto control, luego punto final
@@ -287,4 +281,3 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
 
 
       } }
-                   
