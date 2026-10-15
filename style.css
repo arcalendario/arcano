@@ -1,4 +1,3 @@
-/* Modo Claro (por defecto) */
 :root {
     color-scheme: light;
 }
@@ -7,15 +6,17 @@ body {
     background-color: #ffffff;
     color: #000000;
     margin: 0;
-    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Modo Oscuro (se activa solo si el celu/navegador lo tiene encendido) */
+/* Soporte automático para modo oscuro */
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
     }
-
     body {
         background-color: #121212;
         color: #ffffff;
@@ -29,4 +30,3 @@ body {
 .canvas-alineacion {
     text-align: center;
 }
-
