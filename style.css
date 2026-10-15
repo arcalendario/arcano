@@ -1,12 +1,25 @@
+/* Modo Claro (por defecto) */
 :root {
     color-scheme: light;
 }
 
 body {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
     padding: 20px;
+}
+
+/* Modo Oscuro (se activa solo si el celu/navegador lo tiene encendido) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
 }
 
 .container-clock {
@@ -16,3 +29,4 @@ body {
 .canvas-alineacion {
     text-align: center;
 }
+
