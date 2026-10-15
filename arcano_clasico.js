@@ -1,11 +1,11 @@
   ctx.beginPath();
   ctx.lineWidth = ancho * 3 / 160;
 
-  // Detectar si el navegador está en modo oscuro
+  // Detectar si el navegador está en modo oscuro y asignar el color del trazo igual al fondo
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      ctx.strokeStyle = "white"; // Líneas blancas para fondo negro en modo oscuro
+      ctx.strokeStyle = "#121212"; // Color oscuro igual al fondo del modo oscuro
   } else {
-      ctx.strokeStyle = "#333333"; // Líneas oscuras para fondo blanco en modo claro
+      ctx.strokeStyle = "#ffffff"; // Color blanco igual al fondo del modo claro
   }
 
   ctx.moveTo((ancho/2)+ancho/22, alto/2 );
