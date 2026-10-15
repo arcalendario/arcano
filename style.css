@@ -1,6 +1,10 @@
+:root {
+    color-scheme: light;
+}
+
 body {
-    background-color: white;
-    color: black;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     margin: 0;
     padding: 20px;
 }
