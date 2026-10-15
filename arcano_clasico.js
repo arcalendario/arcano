@@ -232,7 +232,7 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
 
 
   ctx.beginPath();
-  ctx.lineWidth= ancho*3/160;
+  ctx.lineWidth= ancho*5/160;
   
   // AQUÍ ESTABA EL DETALLE: Tomamos el color de fondo real del body en lugar de "white" fijo
   ctx.strokeStyle = window.getComputedStyle(document.body).backgroundColor;
