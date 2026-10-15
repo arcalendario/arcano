@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,37 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcalendario</title>
     <link rel="stylesheet" href="style.css">
-    
-    
-    
 </head>
 <body>
     
-       <script src="clock.js"></script>
-       <script src="arcano_clasico.js"></script>
-       <script src="probando.js"></script>
+    <div class="container-clock">
+        <p id="german" style="color: rgba(255, 255, 255, 0.836); font-family: Verdana; font-size: 35px;">Arcane Clock</p>
 
-           
+        <div class="canvas-alineacion">
+            <canvas id="canvas" width="350" height="350"></canvas> 
 
-</body>
+            <p id="german-sub" style="color: rgba(255, 255, 255, 0.836); font-family: Verdana; font-size: 29px;">Arcane Clock</p>
+            <p id="german-footer" style="color: rgba(0, 0, 0, 0.836); font-family: Helvetica; font-size: 16px;">Arcane Clock <br>by <strong>Arcalendario ®</strong></p>
+        </div>
+    </div>
 
-
-<div class="container-clock">
-  
-    <p id="german"; style="color: rgba(255, 255, 255, 0.836); font-family: Verdana ; font-size: 35px" >Arcane Clock</p>
-
-<dic class="canvas-alineacion">
-    <canvas id="canvas" width="350" height="350" ></canvas> 
-
-
-         <p id="german"; style="color: rgba(255, 255, 255, 0.836); font-family: Verdana ; font-size: 29px" >Arcane Clock</p>
-         <p id="german"; style="color: rgba(0, 0, 0, 0.836); font-family: Helvetica; font-size: 16px" >Arcane Clock <br>by <strong>Arcalendario ®</strong> </p>
-         
-
-
-</div>
-    
-</div>
+    <!-- Scripts al final del body para asegurar que el DOM esté cargado -->
+    <script src="clock.js"></script>
+    <script src="arcano_clasico.js"></script>
+    <script src="probando.js"></script>
 
 </body>
 </html>
