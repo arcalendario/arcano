@@ -1,6 +1,14 @@
-.container-clock {
-    text-align: center;
-    ;
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 20px;
 }
 
-.canvas-center{ text-align: center;}
+.container-clock {
+    text-align: center;
+}
+
+.canvas-alineacion {
+    text-align: center;
+}
