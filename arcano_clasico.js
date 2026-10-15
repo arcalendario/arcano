@@ -233,7 +233,9 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
 
   ctx.beginPath();
   ctx.lineWidth= ancho*3/160;
-  ctx.strokeStyle = "white";
+  
+  // AQUÍ ESTABA EL DETALLE: Tomamos el color de fondo real del body en lugar de "white" fijo
+  ctx.strokeStyle = window.getComputedStyle(document.body).backgroundColor;
 
   ctx.moveTo((ancho/2)+ancho/22, alto/2 );
   ctx.quadraticCurveTo(ancho/2, alto/2, ancho/2, alto/2-alto/22); // pto control, luego punto final
@@ -281,3 +283,4 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
 
 
       } }
+      
