@@ -1,14 +1,18 @@
+let primeraCarga = true; // Arranca en true para acelerar solo la bienvenida
+
 function transicionar(colorActual, colorObjetivo) {
+  // Si estamos en la primera carga usa paso 15 (rápido); 
+  // una vez sincronizado, pasa a 4 (el ritmo lento original de siempre)
+  var paso = primeraCarga ? 15 : 4;
+
   for (var i = 0; i < 3; i++) {
     var diff = colorObjetivo[i] - colorActual[i];
     
-    // Si la diferencia es muy chiquita, lo posamos directamente en el objetivo
-    if (Math.abs(diff) < 1) {
+    if (Math.abs(diff) <= paso) {
       colorActual[i] = colorObjetivo[i];
     } else {
-      // Avanza proporcionalmente a la distancia (rápido al principio, frenando suavemente)
-      colorActual[i] += diff * 0.15;
-      colorActual[i] = Math.round(colorActual[i]);
+      if (diff > 0) { colorActual[i] -= paso; }
+      if (diff < 0) { colorActual[i] += paso; }
     }
   }
 }
@@ -131,6 +135,21 @@ function arcano_clasico () {
       ctx.lineTo(ancho/2, 0);
       ctx.lineTo(0, alto/2);
       ctx.fill();
+
+      // Comprobamos si ya terminó la primera sincronización para volver al ritmo normal
+      if (primeraCarga) {
+        let sincronizado = true;
+        let indH = [H1, H2, H4, H8];
+        let indM = [M1, M2, M4, M8];
+        for (let i = 0; i < 4; i++) {
+          if (colores_a[i].toString() !== colores[indH[i]].toString()) sincronizado = false;
+          if (colores_a[i+4].toString() !== colores[indM[i]].toString()) sincronizado = false;
+        }
+        if (sincronizado) {
+          primeraCarga = false; // ¡Listo! A partir de ahora usa la velocidad lenta original
+          console.log("Sincronización inicial completa. Volviendo a velocidad normal.");
+        }
+      }
 
       // Líneas divisorias y bordes
       ctx.beginPath();
