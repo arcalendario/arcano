@@ -282,4 +282,4 @@ if (colores_a[7] != colores[M8] ) { for (var i = 0; i < 3; i++)
       }
 
 
-      } } 
+      } }
