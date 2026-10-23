@@ -1,1 +1,0 @@
-function mifuncion () { console.log("probando")}
