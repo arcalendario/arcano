@@ -1,0 +1,2 @@
+
+Get-ChildItem -Path .\src -Include *.cpp, *.h -Recurse | ForEach-Object { Add-Content codigo_completo.txt "`n=== ARCHIVO: $($_.Name) ===`n"; Get-Content $_.FullName | Add-Content codigo_completo.txt }
